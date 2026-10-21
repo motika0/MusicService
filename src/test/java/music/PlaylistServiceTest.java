@@ -97,4 +97,10 @@ public class PlaylistServiceTest {
 
         assertEquals(1, playlist.getTracks().size());
     }
+    @Test
+    void shouldCreateEmptyPlaylist() {
+        Playlist empty = new Playlist(3, "Новый");
+
+        assertTrue(empty.getTracks().isEmpty());
+    }
 }
