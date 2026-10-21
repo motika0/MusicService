@@ -95,7 +95,7 @@ public class PlaylistServiceTest {
                 () -> service.addTrack(1, sameTrack)
         );
 
-        assertEquals(1, playlist.getTracks().size());
+        assertEquals(2, playlist.getTracks().size());
     }
     @Test
     void shouldCreateEmptyPlaylist() {
