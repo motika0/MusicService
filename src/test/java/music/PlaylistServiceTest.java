@@ -103,4 +103,30 @@ public class PlaylistServiceTest {
 
         assertTrue(empty.getTracks().isEmpty());
     }
+
+    @Test
+    void shouldLogErrorWhenRepositorySaveFails() {
+
+        PlaylistRepository failingRepository = new PlaylistRepository() {
+
+            @Override
+            public void save(Playlist playlist) {
+                throw new IllegalStateException("Repository unavailable");
+            }
+
+            @Override
+            public Playlist findById(int id) {
+                return playlist;
+            }
+        };
+
+        PlaylistService failingService =
+                new PlaylistService(failingRepository);
+
+        assertThrows(
+                IllegalStateException.class,
+                () -> failingService.addTrack(1, track)
+        );
+    }
+
 }
