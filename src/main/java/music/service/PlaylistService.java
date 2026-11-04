@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PlaylistService {
-
+    // THIS IS AN INTENTIONAL CHECKSTYLE VIOLATION CREATED FOR LABORATORY DEMONSTRATION PURPOSESfvsdgsdgdfgsfdvhbsdvjsdvjsdvhsdvsdvsdhvhsdvhsdvsdvsdvsddvsdv
     // Создание Logger для данного класса
     private static final Logger logger =
             LoggerFactory.getLogger(PlaylistService.class);
